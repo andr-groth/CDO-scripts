@@ -3,7 +3,7 @@
 The collection of scripts offers a convenient way to process multiple netCDF files with the [Climate Data
 Operators (CDO)](https://code.mpimet.mpg.de/projects/cdo) tool.
 
-## Requirements
+### Requirements
 
 [Climate Data Operators (CDO)](https://code.mpimet.mpg.de/projects/cdo) tool is required.
 

@@ -8,11 +8,11 @@ The `merge.sh` script is used to merge netCDF files in time with the same filena
 ./merge.sh [path]
 ```
 
-Arguments:
+### Arguments
 
 - `path`:  optional argument specifiyng the directory containing the NetCDF files to be merged. If no path is provided, the current directory `.` will be used as the default.
 
-## Script Workflow
+### Outputs
 
 The script executes the following steps:
 

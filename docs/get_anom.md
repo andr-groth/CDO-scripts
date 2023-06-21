@@ -8,12 +8,12 @@ The `get_anom.sh` script is used to obtain anomalies for multiple files. It read
 ./get_anom.sh CONFIGFILE INFILES
 ```
 
-Arguments:
+### Arguments
 
 - `CONFIGFILE`: Shell script that defines the parameters.
 - `INFILES`: One or more input netCDF files for which anomalies will be obtained.
 
-## Configuration file
+### Configuration file
 
 The `CONFIGFILE` provides the parameters required for anomaly creation. The following parameters are used by the script:
 
@@ -28,12 +28,7 @@ The `CONFIGFILE` provides the parameters required for anomaly creation. The foll
 
 - __`refdate`__: The start and end dates for the climatological mean used in the `cdo seldate` command.
 
-!!! note
-    - Examples of `CONFIGFILE` file can be found in the `configs/` folder of this repository.
-    - Examples of `regions` files can be found in the `regions/` folder of this respository.
-
-
-## Output
+### Output
 
 - The anomalies are saved in a subfolder named `anom/` within the input file's folder, with `anom_` prepended to the
   input file's name.
@@ -66,4 +61,11 @@ To execute the script with the given configuration file and input files, we run 
 ./get_anom.sh config.sh path/to/files/*.nc
 ```
 
-The script reads the parameters from `config.sh` and process the input files accordingly. Anomalies will be saved in the `path/to/files/anom/` subfolder, with `anom_` prepended to the original file names. The corresponding climatological mean fields will be saved in the `path/to/files/anom/mean/` subfolder, with `mean_` prepended to the original file names.
+The script reads the parameters from `config.sh` and process the input files accordingly. Anomalies will be saved in the
+`path/to/files/anom/` subfolder, with `anom_` prepended to the original file names. The corresponding climatological
+mean fields will be saved in the `path/to/files/anom/mean/` subfolder, with `mean_` prepended to the original file
+names.
+
+!!! note
+    - Examples of `CONFIGFILE` file can be found in the `configs/` folder of this repository.
+    - Examples of `regions` files can be found in the `regions/` folder of this respository.

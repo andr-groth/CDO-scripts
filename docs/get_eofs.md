@@ -8,12 +8,12 @@ The `get_eofs.sh` script is used to obtain ensemble Empirical Orthogonal Functio
 ./get_eofs.sh NEOFS INFILES
 ```
 
-Arguments:
+### Arguments
 
 - `NEOFS`: The number of EOFs to calculate.
 - `INFILES`: One or more input netCDF files from which to calculate the EOFs.
 
-## Output
+### Output
 
 The script saves the following output files in a subfolder named `pcs/`, created in the folder of the first input file:
 

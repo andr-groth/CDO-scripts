@@ -1,4 +1,5 @@
 site_name: CDO scripts
+repo_url: https://github.com/andr-groth/cdo-scripts
 nav:
   - 'index.md'
   - 'Main scripts':
@@ -12,6 +13,12 @@ nav:
   - 'Additional scripts':
     - 'merge.md'
 theme:
-  name: readthedocs
+  name: material
+  features:
+    - navigation.expand
 markdown_extensions:
   - admonition
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/andr-groth

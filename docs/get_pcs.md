@@ -8,12 +8,12 @@ The `get_pcs.sh` script is used to calculate Principal Components (PCs) for mult
 ./get_pcs.sh EOFFILE INFILES
 ```
 
-Arguments:
+### Arguments
 
 - `EOFFILE`: The netCDF file with the EOFs.
 - `INFILES`: The netCDF files that are projected onto the EOFs to obtain the PCs.
 
-## Output
+### Output
 
 The PCs are saved in the folder of the EOF file, with `pcs_` prepended to the filename.
 

@@ -12,14 +12,14 @@ To use the script, run the following command in the terminal:
 ./prepare_data.sh CONFIGFILE NEOFS FILEPATH
 ```
 
-Arguments:
+### Arguments
 
 - `CONFIGFILE`: The configuration file that provides parameters for creating anomalies.
 - `NEOFS`: The number of EOFs to calculate.
 - `FILEPATH`: The path to the folder containing the netCDF files to be processed. The script will process all `*.nc`
   files in the folder.
 
-## Script Steps
+### Workflow
 
 1. **Create Anomalies**
     - The script calls the `get_anom.sh` script to create anomalies for each input netCDF file.
@@ -34,12 +34,12 @@ Arguments:
 3. **Obtain Individual PCs**
     - The script calls the `get_pcs.sh` script to obtain individual PCs by projecting the anomalies onto the ensemble EOFs.
 
-## Output
+### Output
 The resulting data files are saved in the following subfolders:
 
-- Anomalies: The resulting anomalies are saved in a subfolder named `anom` within `FILEPATH`.
-- Ensemble EOFs: The calculated EOFs are saved in a subfolder named `anom/pcs` within `FILEPATH`.
-- PCs: The individual PCs are saved in a subfolder named `anom/pcs` within `FILEPATH`.
+- __Anomalies__: The resulting anomalies are saved in a subfolder named `anom` within `FILEPATH`.
+- __Ensemble EOFs__: The calculated EOFs are saved in a subfolder named `anom/pcs` within `FILEPATH`.
+- __PCs__: The individual PCs are saved in a subfolder named `anom/pcs` within `FILEPATH`.
 
 ## Example
 
@@ -53,6 +53,6 @@ The command to run the script would be:
 
 The resulting data files are:
 
-- Anomalies: `data/files/anom/anom_*.nc`.
-- Ensemble EOFs: `data/files/anom/pcs/eofs.nc`.
-- PCs: `data/files/anom/pcs/pcs_*.nc`.
+- __Anomalies__: `data/files/anom/anom_*.nc`.
+- __Ensemble EOFs__: `data/files/anom/pcs/eofs.nc`.
+- __PCs__: `data/files/anom/pcs/pcs_*.nc`.
