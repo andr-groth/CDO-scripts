@@ -11,7 +11,7 @@ Operators (CDO)](https://code.mpimet.mpg.de/projects/cdo) tool.
 
 The main scripts are:
 
-- The `get_anom.sh` script is used to obtain anomalies for multiple files.
+- The `get_anom.sh` script is used to obtain anomalies for multiple netCDF files.
 
 - The `get_eofs.sh` script is used to obtain ensemble Empirical Orthogonal Functions (EOFs) from multiple netCDF files.
 
