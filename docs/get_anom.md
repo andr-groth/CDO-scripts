@@ -1,10 +1,10 @@
 # Get anomalies
 
-The `get_anom.sh` script is used to obtain anomalies for multiple files. It reads parameters from a configuration file and applies them to the input files to generate anomalies. The anomalies are saved in a subfolder named `anom` within the input file's folder, with `anom_` prepended to the input file's name. Additionally, the corresponding climatological mean fields are saved in a subfolder named `anom/mean`, with `mean_` prepended to the input file's name.
+The `get_anom.sh` script is used to obtain anomalies for multiple files. It reads parameters from a configuration file and applies them to the input files to generate anomalies. The anomalies are saved in a subfolder named `anom/` within the input file's folder, with `anom_` prepended to the input file's name. Additionally, the corresponding climatological mean fields are saved in a subfolder named `anom/mean/`, with `mean_` prepended to the input file's name.
 
 ## Usage
 
-```
+```shell
 ./get_anom.sh CONFIGFILE INFILES
 ```
 
@@ -29,15 +29,15 @@ The `CONFIGFILE` provides the parameters required for anomaly creation. The foll
 - __`refdate`__: The start and end dates for the climatological mean used in the `cdo seldate` command.
 
 !!! note
-    - Examples of `CONFIGFILE` file can be found in the `/configs` folder of this repository.
-    - Examples of `regions` files can be found in the `/regions` folder of this respository.
+    - Examples of `CONFIGFILE` file can be found in the `configs/` folder of this repository.
+    - Examples of `regions` files can be found in the `regions/` folder of this respository.
 
 
 ## Output
 
-- The anomalies are saved in a subfolder named `anom` within the input file's folder, with `anom_` prepended to the
+- The anomalies are saved in a subfolder named `anom/` within the input file's folder, with `anom_` prepended to the
   input file's name.
-- The corresponding climatological mean fields are saved in a subfolder named `anom/mean`, with `mean_` prepended to the input file's name.
+- The corresponding climatological mean fields are saved in a subfolder named `anom/mean/`, with `mean_` prepended to the input file's name.
 
 
 ## Example
@@ -46,7 +46,7 @@ Here's an example to illustrate the usage of the `get_anom.sh` script:
 
 Suppose we have the following configuration file named `config.sh`:
 
-```bash
+```shell
 date="1850-01-01,2014-12-31"
 grid="global_1"
 landmask=false
@@ -62,8 +62,8 @@ And we want to create anomalies for all netCDF files in `path/to/files/*.nc`.
 
 To execute the script with the given configuration file and input files, we run the following command:
 
-```bash
+```shell
 ./get_anom.sh config.sh path/to/files/*.nc
 ```
 
-The script reads the parameters from `config.sh` and process the input files accordingly. Anomalies will be saved in the `path/to/files/anom` subfolder, with `anom_` prepended to the original file names. The corresponding climatological mean fields will be saved in the `path/to/files/anom/mean` subfolder, with `mean_` prepended to the original file names.
+The script reads the parameters from `config.sh` and process the input files accordingly. Anomalies will be saved in the `path/to/files/anom/` subfolder, with `anom_` prepended to the original file names. The corresponding climatological mean fields will be saved in the `path/to/files/anom/mean/` subfolder, with `mean_` prepended to the original file names.

@@ -17,9 +17,10 @@ To use the script, run the following command in the terminal:
 
 Arguments:
 
-- `CONFIGFILE`: The path to the configuration file that provides parameters for creating anomalies.
-- `EOFFILE`: The path to the file containing the EOFs.
-- `FILEPATH`: The path to the folder containing the netCDF files to be processed.
+- `CONFIGFILE`: The configuration file that provides parameters for creating anomalies.
+- `EOFFILE`: The file containing the EOFs.
+- `FILEPATH`: The path to the folder containing the netCDF files to be processed.  The script will process all `*.nc`
+  files in the folder.
 
 ## Script Steps
 
@@ -28,32 +29,31 @@ Arguments:
     - Anomalies are created for each input file using the specified parameters from the configuration file.
 
 2. **Make a copy of EOFs**
-    - The provided EOFs file (`EOFFILE`) is copied to a subfolder named `prj` within `FILEPATH`. The `prj` subfolder is created if it doesn't already exist.
+    - The provided EOFs file (`EOFFILE`) is copied to a subfolder named `prj/` within `FILEPATH`. The `prj/` subfolder is created if it doesn't already exist.
 
 3. **Obtain Individual PCs**
-    - The script calls the `get_pcs.sh` script to obtain individual PCs by projecting the anomalies onto the copied EOFs.
-    - Individual PCs are calculated by projecting the anomalies onto the copied EOFs.
+    - The script calls the `get_pcs.sh` script to obtain individual PCs by projecting the anomalies from the first step onto the copied EOFs.
 
 ## Output
 
 The resulting data files are saved in the following subfolders:
 
-- Anomalies: The resulting anomalies are saved in a subfolder named `anom` within `FILEPATH`.
-- Copied EOFs: The copied EOFs are saved in a subfolder named `anom/prj` within `FILEPATH`.
-- PCs: The individual PCs are saved in a subfolder named `anom/prj` within `FILEPATH`.
+- Anomalies: The resulting anomalies are saved in a subfolder named `anom/` within `FILEPATH`.
+- Copied EOFs: The copied EOFs are saved in a subfolder named `anom/prj/` within `FILEPATH`.
+- PCs: The individual PCs are saved in a subfolder named `anom/prj/` within `FILEPATH`.
 
 ## Example
 
-Suppose we want to process netCDF files located in the folder `/data2/files`. We have a configuration file named `config.sh`, and we have EOFs stored in the file `/data/eofs.nc`.
+Suppose we want to process netCDF files located in the folder `data2/files/`. We have a configuration file named `config.sh`, and we have EOFs stored in the file `data/eofs.nc`.
 
 The command to run the script would be:
 
-```bash
-./prepare_data2.sh config.sh /data/eofs.nc /data2/files
+```shell
+./prepare_data2.sh config.sh data/eofs.nc data2/files/
 ```
 
 The resulting data files are:
 
-- Anomalies: `/data2/files/anom/anom_*.nc`.
-- Copied EOFs: `/data2/files/anom/prj/eofs.nc`.
-- PCs: `/data2/files/anom/prj/pcs_*.nc`.
+- Anomalies: `data2/files/anom/anom_*.nc`.
+- Copied EOFs: `data2/files/anom/prj/eofs.nc`.
+- PCs: `data2/files/anom/prj/pcs_*.nc`.

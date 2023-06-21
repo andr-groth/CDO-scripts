@@ -15,7 +15,7 @@ Arguments:
 
 ## Output
 
-The script saves the following output files in a subfolder named `pcs`, created in the folder of the first input file:
+The script saves the following output files in a subfolder named `pcs/`, created in the folder of the first input file:
 
 - `eigenvalues.csv`: A CSV file containing the eigenvalues of the EOFs.
 - `eofs.nc`: A netCDF file containing the ensemble EOFs.

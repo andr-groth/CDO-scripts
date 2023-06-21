@@ -4,7 +4,7 @@ The `get_pcs.sh` script is used to calculate Principal Components (PCs) for mult
 
 ## Usage
 
-```
+```shell
 ./get_pcs.sh EOFFILE INFILES
 ```
 
@@ -27,7 +27,7 @@ Suppose we have the following files in the current directory:
 
 To calculate the PCs for `data1.nc` and `data2.nc` using the EOFs in `eof.nc`, we would run the following command:
 
-```
+```shell
 ./get_pcs.sh eof.nc data1.nc data2.nc
 ```
 

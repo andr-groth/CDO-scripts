@@ -16,7 +16,7 @@ Arguments:
 
 The script executes the following steps:
 
-1. Sets up the output directory for the merged files. The directory is named `merged` and is created within the specified `path` or default `.` input directory.
+1. Sets up the output directory for the merged files. The directory is named `merged/` and is created within the specified `path` or default `.` input directory.
 2. Identifies groups of files based on a substring (prefix) extracted before the last underscore in each file's name.
 4. Merges the files with the same prefix.
     - If the output file already exists, the script skips merging and displays information about the existing file.
@@ -25,10 +25,10 @@ The script executes the following steps:
 ## Example
 
 Suppose we have four files `file_1_a.nc`, `file_1_b.nc` `file_2_a.nc`, and `file_2_b.nc` in the directory
-`/path/to/files`. To merge the files with the same prefix, we would run the following command:
+`path/to/files/`. To merge the files with the same prefix, we would run the following command:
 
 ```shell
-./merge.sh /path/to/files
+./merge.sh path/to/files/
 ```
 
 The script will merge:
@@ -36,4 +36,4 @@ The script will merge:
 - `file_1_a.nc` and `file_1_b.nc` in `file_1.nc`
 - `file_2_a.nc` and `file_2_b.nc` in `file_2.nc`
 
-The merged files will be saved in `/path/to/files/merged`.
+The merged files will be saved in `path/to/files/merged`.
