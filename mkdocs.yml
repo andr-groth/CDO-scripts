@@ -1,0 +1,18 @@
+site_name: CDO scripts
+site_url: ""
+nav:
+  - 'index.md'
+  - 'Main scripts':
+    - 'get_anom.md'
+    - 'get_eofs.md'
+    - 'get_pcs.md'
+  - 'Combined scripts':
+    - 'prepare_data.md'
+    - 'prepare_data2.md'
+
+  - 'Additional scripts':
+    - 'merge.md'
+theme:
+  name: readthedocs
+markdown_extensions:
+  - admonition
