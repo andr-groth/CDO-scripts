@@ -1,5 +1,4 @@
 site_name: CDO scripts
-site_url: ""
 nav:
   - 'index.md'
   - 'Main scripts':
