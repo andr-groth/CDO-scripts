@@ -24,14 +24,14 @@ To use the script, run the following command in the terminal:
 ### Workflow
 
 1. **Create Anomalies**
-    - The script calls the `get_anom.sh` script to create anomalies for each input netCDF file.
+    - The script calls the [`get_anom.sh`](get_anom.md) script to create anomalies for each input netCDF file.
     - Anomalies are created for each input file using the specified parameters from the configuration file.
 
 2. **Make a copy of EOFs**
     - The provided EOFs file (`EOFFILE`) is copied to a subfolder named `prj/` within `FILEPATH`. The `prj/` subfolder is created if it doesn't already exist.
 
 3. **Obtain Individual PCs**
-    - The script calls the `get_pcs.sh` script to obtain individual PCs by projecting the anomalies from the first step onto the copied EOFs.
+    - The script calls the [`get_pcs.sh`](get_pcs.md) script to obtain individual PCs by projecting the anomalies from the first step onto the copied EOFs.
 
 ### Output
 

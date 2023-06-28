@@ -22,17 +22,17 @@ To use the script, run the following command in the terminal:
 ### Workflow
 
 1. **Create Anomalies**
-    - The script calls the `get_anom.sh` script to create anomalies for each input netCDF file.
+    - The script calls the [`get_anom.sh`](get_anom.md) script to create anomalies for each input netCDF file.
     - The configuration file (`CONFIGFILE`) and the path to the netCDF files (`FILEPATH`) are provided as arguments.
     - Anomalies are created for each input file matching `*.nc`, using the specified parameters from the configuration file.
 
 2. **Calculate Ensemble EOFs**
-    - The script calls the `get_eofs.sh` script to calculate ensemble EOFs and eigenvalues.
+    - The script calls the [`get_eofs.sh`](get_eofs.md) script to calculate ensemble EOFs and eigenvalues.
     - The number of EOFs to calculate is determined by the `NEOFS` argument.
     - The anomalies created in the previous step are used as input.
 
 3. **Obtain Individual PCs**
-    - The script calls the `get_pcs.sh` script to obtain individual PCs by projecting the anomalies onto the ensemble EOFs.
+    - The script calls the [`get_pcs.sh`](get_pcs.md) script to obtain individual PCs by projecting the anomalies onto the ensemble EOFs.
 
 ### Output
 The resulting data files are saved in the following subfolders:
