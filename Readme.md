@@ -1,7 +1,9 @@
-## Overview
+# CDO scripts
 
-The collection of scripts offers a convenient way to process multiple netCDF files with the [Climate Data
+Collection of scripts offering a convenient way to process multiple netCDF files with the [Climate Data
 Operators (CDO)](https://code.mpimet.mpg.de/projects/cdo) tool.
+
+## Documentation
 
 See the [documentation](https://andr-groth.github.io/cdo-scripts/) for more details on the available scripts.
 
