@@ -3,9 +3,15 @@
 The collection of scripts offers a convenient way to process multiple netCDF files with the [Climate Data
 Operators (CDO)](https://code.mpimet.mpg.de/projects/cdo) tool.
 
-### Requirements
+## Requirements
 
-[Climate Data Operators (CDO)](https://code.mpimet.mpg.de/projects/cdo) tool is required.
+[Climate Data Operators (CDO)](https://code.mpimet.mpg.de/projects/cdo) tool is required, which can be installed with:
+
+```bash
+sudo apt install cdo
+```
+
+Scripts tested with CDO version 2.0.4-1 on Ubuntu 22.04.
 
 ## Main scripts
 
