@@ -15,7 +15,7 @@ Scripts tested with CDO version 2.0.4-1 on Ubuntu 22.04.
 
 ## Documentation
 
-See the [documentation](https://andr-groth.github.io/cdo-scripts/) for more details on the available scripts.
+See the [documentation](https://andr-groth.github.io/CDO-scripts/) for more details on the available scripts.
 
 ### Main scripts
 
